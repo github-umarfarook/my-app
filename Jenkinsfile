@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('----clean----') {
             steps {
+                sh " rm -rf /var/lib/jenkins/workspace/*"
                 sh "mvn clean"
             }
         }
